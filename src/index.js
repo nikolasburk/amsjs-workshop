@@ -19,24 +19,17 @@ type Post {
 }
 type Query {
   info: String!
-  posts(searchString: String): [Post!]!
-  post(id: ID!): Post
+  posts: [Post!]!
 }
 `
 
 const resolvers = {
   Query: {
     info: () => `This is the API for a simple blogging application.`,
-    posts: (_, args) => {
-      return args.searchString
-        ? postData.filter(
-            post =>
-              post.title.includes(args.searchString) ||
-              post.content.includes(args.searchString),
-          )
-        : postData
+    posts: () => {
+      return postData
     },
-    post: (_, args) => {
+    post: () => {
       return postData.find(post => post.id === args.id)
     }
   },

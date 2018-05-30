@@ -4,15 +4,6 @@ Go back to the [`master`](https://github.com/nikolasburk/amsjs-workshop) branch.
 
 ## Usage
 
-### Deploy the Prisma service
-
-```bash
-npm install -g prisma
-prisma deploy
-```
-
-> **Note**: ...
-
 ### Start the server
 
 ```bash
@@ -30,18 +21,7 @@ graphql playground
 
 ```graphql
 query {
-  posts(searchString: "QL") {
-    id
-    title
-    content
-    published
-  }
-}
-```
-
-```graphql
-query {
-  post(id: "post-0") {
+  posts {
     id
     title
     content
