@@ -1,0 +1,11 @@
+{
+  "name": "graphqlday-workshop",
+  "version": "1.0.0",
+  "repository": "git@github.com:nikolasburk/graphqlday-workshop.git",
+  "author": "Nikolas Burk <nikolas.burk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.14.6",
+    "prisma-binding": "^2.0.2"
+  }
+}
