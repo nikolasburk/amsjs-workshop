@@ -1,5 +1,4 @@
 datamodel: datamodel.graphql
-endpoint: https://eu1.prisma.sh/nikolas-burk/prisma/dev
 
 hooks:
   post-deploy:

@@ -1,24 +1,26 @@
 # Building a GraphQL Server with Node.JS
 
-This is the repository for the afternoon workshop at [GraphQL Day](https://www.graphqlday.org) 🇳🇱
+This is the repository for the afternoon workshop at [AmsterdamJS](https://www.amsterdamjs.com) 🇳🇱
+
+> [See the end of this README](#graphql-europe) of this repository to get a 25% discount on your [GraphQL Europe](https://www.graphql-europe.org).
 
 ## Overview
 
 This git repository contains several branches that correspond to the "steps" to be performed throughout the workshops. The `master` branch contains the final version of the code.
 
-- [Step 0](https://github.com/nikolasburk/graphqlday-workshop/tree/step0): Minimal GraphQL server
-- [Step 1](https://github.com/nikolasburk/graphqlday-workshop/tree/step1): Extend API with query arguments
-- [Step 2](https://github.com/nikolasburk/graphqlday-workshop/tree/step2): Complete API operations
-- [Step 3](https://github.com/nikolasburk/graphqlday-workshop/tree/step3): Add database layer with Prisma and Prisma bindings
-- [Step 4](https://github.com/nikolasburk/graphqlday-workshop/tree/step4): Complete API operations against the database
+- [Step 0](https://github.com/nikolasburk/amjs-workshop/tree/step0): Minimal GraphQL server
+- [Step 1](https://github.com/nikolasburk/amjs-workshop/tree/step1): Extend API with query arguments
+- [Step 2](https://github.com/nikolasburk/amjs-workshop/tree/step2): Complete API operations
+- [Step 3](https://github.com/nikolasburk/amjs-workshop/tree/step3): Add database layer with Prisma and Prisma bindings
+- [Step 4](https://github.com/nikolasburk/amjs-workshop/tree/step4): Complete API operations against the database
 
 ## Usage
 
 ### Clone the repository
 
 ```bash
-git clone git@github.com:nikolasburk/graphqlday-workshop.git
-cd graphqlday-workshop
+git clone git@github.com:nikolasburk/amjs-workshop.git
+cd amjs-workshop
 ```
 
 ### Deploy the Prisma service
@@ -28,7 +30,7 @@ npm install -g prisma
 prisma deploy
 ```
 
-> **Note**: If you don't have [Docker](https://www.docker.com) installed on your machine, you need to remove the [`cluster`](./database/prisma.yml#L9) property from [`prisma.yml`](./database/prisma.yml) and select a _development cluster_ when prompted by the CLI where to deploy your Prisma API. The endpoint that's then printed by the CLI needs to be pasted into [`index.js`](./src/index.js#L29) where `Prisma` is instantiated.
+> **Note**: When running `prisma deploy`, the Prisma CLI prompts you to select a _Prisma server_ to which the _Prisma service_ should be deployed. Select the **Demo server** to deploy to Prisma Cloud or setup your own _Prisma server_ locally with Docker. When deploying to Prisma Cloud, the your Prisma API is backed by an AWS Aurora instance - locally you can choose between MySQL and Postgres. The _endpoint_ that's then printed by the CLI needs to be pasted into [`index.js`](./src/index.js#l80) where Prisma is instantied.
 
 ### Start the server
 
@@ -48,7 +50,7 @@ graphql playground
 The Playground now allows to work with both GraphQL APIs side-by-side. It receives its information about the corresponding endpoints and schemas from the configuration in [`.graphqlconfig.yml`](.graphqlconfig.yml):
 
 - `app`: The application layer built with `graphql-yoga`
-- `database` The database layer configured with Prisma
+- `prisma` The database layer configured with Prisma
 
 ## Sample queries/mutations
 
@@ -189,4 +191,6 @@ The GraphQL server in this repository is build upon the following technologies:
 
 ## 🇪🇺 GraphQL Europe
 
-Get your tickets for GraphQL Europe [here](https://www.graphql-europe.org/).
+Get your tickets for GraphQL Europe [here](https://www.graphql-europe.org/). As a special for workshop attendees, you can use this promo code to get a **25% discount** on your ticket: `amsmjs`
+
+![](https://imgur.com/XQApvTy.png)
