@@ -2,7 +2,7 @@
 
 This is the repository for the morning workshop at [AmsterdamJS](https://www.amsterdamjs.com) 🇳🇱
 
-> [See the end of this README](#graphql-europe) of this repository to get a 25% discount on your [GraphQL Europe](https://www.graphql-europe.org).
+> See the [end of this README](#graphql-europe) to get a 25% discount on your [GraphQL Europe](https://www.graphql-europe.org) ticket 🇪🇺
 
 ## Overview
 
