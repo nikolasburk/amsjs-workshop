@@ -4,15 +4,6 @@ Go back to the [`master`](https://github.com/nikolasburk/amsjs-workshop) branch.
 
 ## Usage
 
-### Deploy the Prisma service
-
-```bash
-npm install -g prisma
-prisma deploy
-```
-
-> **Note**: ...
-
 ### Start the server
 
 ```bash
