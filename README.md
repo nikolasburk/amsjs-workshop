@@ -1,6 +1,6 @@
 # Building a GraphQL Server with Node.JS
 
-This is the repository for the afternoon workshop at [AmsterdamJS](https://www.amsterdamjs.com) 🇳🇱
+This is the repository for the morning workshop at [AmsterdamJS](https://www.amsterdamjs.com) 🇳🇱
 
 > [See the end of this README](#graphql-europe) of this repository to get a 25% discount on your [GraphQL Europe](https://www.graphql-europe.org).
 
