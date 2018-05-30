@@ -3,12 +3,26 @@ const { GraphQLServer } = require('graphql-yoga')
 const postData = [
   {
     id: 'post-0',
-    title: '',
-    content: '',
+    title: '🇪🇺 Join us for GraphQL Europe',
+    content: 'GraphQL Europe is happening on June 15 in Berlin!',
     published: false,
   },
 ]
 let idCount = postData.length
+
+const typeDefs = `
+type Post {
+  id: ID!
+  title: String!
+  content: String!
+  published: Boolean!
+}
+type Query {
+  info: String!
+  posts(searchString: String): [Post!]!
+  post(id: ID!): Post
+}
+`
 
 const resolvers = {
   Query: {
@@ -26,31 +40,6 @@ const resolvers = {
       return postData.find(post => post.id === args.id)
     }
   },
-  Mutation: {
-    createDraft: (_, args) => {
-      const newDraft = {
-        id: `post-${idCount++}`,
-        title: args.title,
-        content: args.content,
-        published: false
-      }
-      postData.push(newDraft)
-      return newDraft
-    },
-    publish: (_, args) => {
-      const postToPublish = postData.find(post => post.id === args.id)
-      postToPublish.published = true
-      return postToPublish
-    },
-    deletePost: (_, args) => {
-      const postToDeleteIndex = postData.findIndex(post => post.id === args.id)
-      if (postToDeleteIndex > -1) {
-        const deleted = postData.splice(postToDeleteIndex, 1)
-        return deleted[0]
-      }
-      return null
-    }
-  }
 }
 
 const server = new GraphQLServer({

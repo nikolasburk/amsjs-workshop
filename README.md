@@ -1,4 +1,4 @@
-# Step 2
+# Step 1
 
 Go back to the [`master`](https://github.com/nikolasburk/amsjs-workshop) branch.
 
@@ -42,38 +42,6 @@ query {
 ```graphql
 query {
   post(id: "post-0") {
-    id
-    title
-    content
-    published
-  }
-}
-```
-
-```graphql
-mutation {
-  createDraft(
-    title: "GraphQL Bindings"
-    content: "Reuse and compose GraphQL APIs"
-  ) {
-    id
-    published
-  }
-}
-```
-
-```graphql
-mutation {
-  publish(id: "post-0") {
-    id
-    published
-  }
-}
-```
-
-```graphql
-mutation {
-  deletePost(id: "post-0") {
     id
     title
     content
