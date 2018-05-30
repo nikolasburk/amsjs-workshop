@@ -1,9 +1,0 @@
-service: graphqlday-demo
-
-stage: dev
-
-datamodel: datamodel.graphql
-
-secret: mysecret123
-
-cluster: local
