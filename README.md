@@ -1,6 +1,6 @@
-# Step 4
+# Step 3
 
-Go back to the [`master`](https://github.com/nikolasburk/graphqlday-workshop) branch.
+Go back to the [`master`](https://github.com/nikolasburk/amsjs-workshop) branch.
 
 ## Usage
 
