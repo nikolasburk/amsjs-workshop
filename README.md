@@ -1,6 +1,6 @@
 # Step 4
 
-Go back to the [`master`](https://github.com/nikolasburk/graphqlday-workshop) branch.
+Go back to the [`master`](https://github.com/nikolasburk/amsjs-workshop) branch.
 
 ## Usage
 
@@ -11,7 +11,7 @@ npm install -g prisma
 prisma deploy
 ```
 
-> **Note**: ...
+> **Note**: When running `prisma deploy`, the Prisma CLI prompts you to select a _Prisma server_ to which the _Prisma service_ should be deployed. Select the **Demo server** to deploy to Prisma Cloud or setup your own _Prisma server_ locally with Docker. When deploying to Prisma Cloud, the your Prisma API is backed by an AWS Aurora instance - locally you can choose between MySQL and Postgres. The _endpoint_ that's then printed by the CLI needs to be pasted into [`index.js`](./src/index.js#l80) where Prisma is instantied.
 
 ### Start the server
 
