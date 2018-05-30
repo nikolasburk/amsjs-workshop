@@ -3,8 +3,8 @@ const { GraphQLServer } = require('graphql-yoga')
 const postData = [
   {
     id: 'post-0',
-    title: '',
-    content: '',
+    title: '🇪🇺 Join us for GraphQL Europe',
+    content: 'GraphQL Europe is happening on June 15 in Berlin!',
     published: false,
   },
 ]
