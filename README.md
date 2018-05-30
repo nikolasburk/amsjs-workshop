@@ -40,43 +40,22 @@ The Playground now allows to work with both GraphQL APIs side-by-side. It receiv
 ### Application layer (`graphql-yoga`)
 
 ```graphql
-post(id: "__POST_ID__") {
-  id
-  title
-  content
-  published
-}
-```
-
-```graphql
-mutation {
-  createDraft(
-    title: "How to GraphQL"
-    content: "Learn best practices all around developing GraphQL APIs"
-  ) {
-    id
-    published
-  }
-}
-```
-
-```graphql
-mutation {
-  publish(id: "__POST_ID__") {
-    id
-    published
-  }
-}
-```
-
-```graphql
-mutation {
-  deletePost(id: "__POST_ID__") {
+query {
+  posts {
     id
     title
     content
     published
   }
+}
+```
+
+```graphql
+post(id: "__POST_ID__") {
+  id
+  title
+  content
+  published
 }
 ```
 
@@ -98,37 +77,6 @@ query {
 ```graphql
 query {
   post(where: {
-    id: "__POST_ID__"
-  }) {
-    id
-    title
-    content
-    published
-  }
-}
-```
-
-```graphql
-mutation {
-  updatePost(
-    where: {
-      id: "__POST_ID__"
-    }
-    data: {
-      published: true
-    }
-  ) {
-    id
-    title
-    content
-    published
-  }
-}
-```
-
-```graphql
-mutation {
-  deletePost(where: {
     id: "__POST_ID__"
   }) {
     id
