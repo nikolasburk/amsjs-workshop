@@ -36,7 +36,7 @@ const resolvers = {
 }
 
 const server = new GraphQLServer({
-  typeDefs: './src/schema.graphql',
+  typeDefs,
   resolvers,
 })
 server.start(() =>
