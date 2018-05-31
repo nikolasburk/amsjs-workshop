@@ -8,19 +8,19 @@ This is the repository for the morning workshop at [AmsterdamJS](https://www.ams
 
 This git repository contains several branches that correspond to the "steps" to be performed throughout the workshops. The `master` branch contains the final version of the code.
 
-- [Step 0](https://github.com/nikolasburk/amjs-workshop/tree/step0): Minimal GraphQL server
-- [Step 1](https://github.com/nikolasburk/amjs-workshop/tree/step1): Extend API with query arguments
-- [Step 2](https://github.com/nikolasburk/amjs-workshop/tree/step2): Complete API operations
-- [Step 3](https://github.com/nikolasburk/amjs-workshop/tree/step3): Add database layer with Prisma and Prisma bindings
-- [Step 4](https://github.com/nikolasburk/amjs-workshop/tree/step4): Complete API operations against the database
+- [Step 0](https://github.com/nikolasburk/amsjs-workshop/tree/step0): Minimal GraphQL server
+- [Step 1](https://github.com/nikolasburk/amsjs-workshop/tree/step1): Extend API with query arguments
+- [Step 2](https://github.com/nikolasburk/amsjs-workshop/tree/step2): Complete API operations
+- [Step 3](https://github.com/nikolasburk/amsjs-workshop/tree/step3): Add database layer with Prisma and Prisma bindings
+- [Step 4](https://github.com/nikolasburk/amsjs-workshop/tree/step4): Complete API operations against the database
 
 ## Usage
 
 ### Clone the repository
 
 ```bash
-git clone git@github.com:nikolasburk/amjs-workshop.git
-cd amjs-workshop
+git clone git@github.com:nikolasburk/amsjs-workshop.git
+cd amsjs-workshop
 ```
 
 ### Deploy the Prisma service
