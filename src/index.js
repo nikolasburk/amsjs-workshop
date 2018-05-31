@@ -29,9 +29,6 @@ const resolvers = {
     posts: () => {
       return postData
     },
-    post: () => {
-      return postData.find(post => post.id === args.id)
-    }
   },
 }
 
