@@ -1,4 +1,4 @@
-# Step 1
+# Step 0
 
 Go back to the [`master`](https://github.com/nikolasburk/amsjs-workshop) branch.
 
